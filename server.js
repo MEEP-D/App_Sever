@@ -30,6 +30,8 @@ app.use("/exercise", exerciseRouter)
 app.get('/', (req, res) => {
   res.send("Hello world!")
 })
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
+
 app.listen(port, async (req, res) => {
   await connect()  // Connect to database MongoDB before listening
   console.log('listening on port ' + port);
